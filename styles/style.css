@@ -1,0 +1,800 @@
+:root {
+  --color1: #dbd3d8;
+  --primary: #2e5e4e;
+  --color2: #93a7aa;
+  --color3: #a7b5b9;
+  --color4: #585651;
+  --color5: #333333;
+  --color6: #eab16a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background: linear-gradient(to top right, #333333, #2b1b03);
+  color: white;
+  min-height: 2500px;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--color6);
+}
+
+.navbar .navbar-nav a {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0.5rem 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--color6);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--color6);
+  transform: scaleX(0);
+  transition: 0.1s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--color6);
+}
+
+/* Hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .img-container img {
+  width: 45%;
+  border: solid 2px black;
+  float: right;
+  margin-left: 10px;
+  margin-right: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 10px 5px rgba(150, 83, 2, 0.8);
+}
+
+.hero .img-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px 10px rgba(234, 177, 106, 0.8);
+}
+
+/* Tyiping text */
+.typing-container {
+  font-family: "Poppins" sans-serif;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20px; /* Panjang karakter teks yang ditampilkan */
+  border-right: 2px solid var(--color6); /* Efek kursor */
+  animation: typing 4s steps(15) infinite, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 55%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: var(--color6);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.content {
+  max-width: 70%;
+  padding-right: 120px;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 3em;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--color6);
+}
+
+.hero .content p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.5s ease-in-out;
+  background-color: var(--color6);
+  border-radius: 7%;
+}
+
+.hero .content .cta:hover {
+  background-color: #ad783c;
+  object-fit: cover;
+  box-shadow: 0 0 0 5px 5px rgba(104, 77, 44, 0.8);
+}
+
+/* Halaman About star*/
+.about {
+  background: var(--color5);
+  height: 100vh;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.about h1 {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 3rem;
+}
+
+.about .a-hero img {
+  width: 20%;
+  margin: 100px;
+  margin-top: 5%;
+  filter: saturate(0%);
+  border-radius: 50%;
+  transition: 0.5s all ease-in-out;
+  box-shadow: 0 0 0 10px 5px rgba(150, 83, 2, 0.8);
+  border: solid var(--color6);
+}
+
+.about .a-hero img:hover {
+  filter: saturate(100%);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 10px rgba(234, 177, 106, 0.8);
+}
+
+/* Card */
+.about .container-about {
+  padding: 20px;
+  align-content: center;
+  text-align: center;
+  margin-left: 30em;
+  margin-top: -28em;
+}
+
+.about .container-about img {
+  width: 70px;
+  height: 70px;
+}
+
+.card-1-about,
+.card-2-about {
+  width: 23em;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 40px;
+  float: left;
+}
+
+.card-1-about {
+  color: var(--color6);
+  border: solid var(--color6);
+  filter: saturate(0%);
+  transition: all ease-in-out 0.5s;
+}
+.card-1-about:hover {
+  filter: saturate(100%);
+  scale: 1.1;
+}
+.card-2-about {
+  color: var(--color6);
+  border: solid var(--color6);
+  filter: saturate(0%);
+  transition: all ease-in-out 0.5s;
+}
+.card-2-about:hover {
+  filter: saturate(100%);
+  scale: 1.1;
+}
+/* paragraph */
+.container-about-2 {
+  height: 5em;
+  margin: 20px;
+  margin-left: 34em;
+  margin-top: -10px;
+}
+
+.p-about {
+  color: white;
+}
+.p-about button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgb(145, 126, 3);
+  margin-top: 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.p-about button:hover {
+  color: darkgoldenrod;
+}
+
+/* Halaman About end*/
+
+/* Halaman Project start*/
+#project {
+  width: 100%;
+  height: 120vh;
+  background: var(--color5);
+}
+
+.container2 .ex-pj {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 100px;
+}
+/* Experience start */
+.container2 .container-ex {
+  align-content: center;
+  text-align: center;
+  border: solid gray;
+  margin-top: 5em;
+  width: 38%;
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 5em;
+}
+
+.container-ex h1 {
+  padding: 20px;
+  margin-top: -20px;
+  font-size: 2.3em;
+}
+
+.card-1-ex,
+.card-2-ex,
+.card-3-ex,
+.card-4-ex,
+.card-5-ex,
+.card-6-ex {
+  margin: 20px;
+  width: 10em;
+  height: auto;
+  padding: 10px;
+  float: left;
+  margin-left: 60px;
+  border-radius: 10px;
+  color: var(--color6);
+  filter: saturate(0%);
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+.card-1-ex:hover {
+  filter: saturate(100%);
+  scale: 1.2;
+}
+.card-2-ex:hover {
+  filter: saturate(100%);
+  scale: 1.2;
+}
+.card-3-ex:hover {
+  filter: saturate(100%);
+  scale: 1.2;
+}
+.card-4-ex:hover {
+  filter: saturate(100%);
+  scale: 1.2;
+}
+.card-5-ex:hover {
+  filter: saturate(100%);
+  scale: 1.2;
+}
+.card-6-ex:hover {
+  filter: saturate(100%);
+  scale: 1.2;
+}
+
+.container-ex img {
+  height: 50px;
+  height: 50px;
+}
+/* Experience end */
+/* Project start */
+.container2 .container-pj {
+  align-content: center;
+  height: 35%;
+  padding: 20px;
+  margin-top: -38em;
+  margin-left: 45em;
+}
+
+.container2 .container-pj img {
+  width: 100%;
+  height: 100px;
+}
+
+.card-1-pj,
+.card-2-pj,
+.card-3-pj,
+.card-4-pj {
+  float: left;
+  width: 30%;
+  height: auto;
+  margin: 30px;
+  border: 3px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.card-1-pj h2 {
+  margin: 5px;
+  color: rgb(171, 171, 171);
+}
+.card-1-pj p {
+  margin: 5px;
+  font-size: 0.8rem;
+  color: rgb(171, 171, 171);
+}
+.card-1-pj button {
+  background-color: rgba(0, 0, 0, 0);
+  color: gray;
+  padding: 5px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.card-1-pj button:hover {
+  color: darkgoldenrod;
+}
+/*  */
+.card-2-pj h2 {
+  margin: 5px;
+  color: rgb(171, 171, 171);
+}
+.card-2-pj p {
+  margin: 5px;
+  font-size: 0.8rem;
+  color: rgb(171, 171, 171);
+}
+.card-2-pj button {
+  background-color: rgba(0, 0, 0, 0);
+  color: gray;
+  padding: 5px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.card-2-pj button:hover {
+  color: darkgoldenrod;
+}
+/*  */
+.card-3-pj h2 {
+  margin: 5px;
+  color: rgb(171, 171, 171);
+}
+.card-3-pj p {
+  margin: 5px;
+  font-size: 0.8rem;
+  color: rgb(171, 171, 171);
+}
+.card-3-pj button {
+  background-color: rgba(0, 0, 0, 0);
+  color: gray;
+  padding: 5px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.card-3-pj button:hover {
+  color: darkgoldenrod;
+}
+/*  */
+.card-4-pj h2 {
+  margin: 5px;
+  color: rgb(171, 171, 171);
+}
+.card-4-pj p {
+  margin: 5px;
+  font-size: 0.8rem;
+  color: rgb(171, 171, 171);
+}
+.card-4-pj button {
+  background-color: rgba(0, 0, 0, 0);
+  color: gray;
+  padding: 5px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.card-4-pj button:hover {
+  color: darkgoldenrod;
+}
+/* Project end */
+/* Halaman Project end*/
+
+/* Halaman Contact start */
+.container3 {
+  height: 100vh;
+  padding: 50px;
+  background-color: #1c1f24; /* Warna latar belakang */
+  color: #ffffff; /* Warna teks */
+}
+
+/* Halaman Contact end */
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--color5);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.7s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #000000;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero .img-container img {
+    width: 40%;
+    margin: 20px;
+    margin-right: 22em;
+    margin-top: 50px;
+  }
+
+  .hero .content {
+    max-width: 90%;
+    padding-right: 0;
+    padding: 1rem;
+  }
+
+  .hero .content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+
+  .hero .content p {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+  .typing-container {
+    display: none;
+  }
+  .hero .content .cta {
+    padding: 0.8rem 2rem;
+    display: none;
+  }
+  /* About */
+  .about h1 {
+    font-size: 4rem;
+    padding-top: 60px;
+    margin-top: 20em;
+  }
+
+  .about .a-hero img {
+    width: 40%;
+    margin: 2px 23em;
+    margin-top: 20px;
+  }
+
+  .about .container-about {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-1-about,
+  .card-2-about {
+    width: 30%;
+    margin: 10px;
+    margin-left: 10em;
+  }
+
+  .container-about-2 {
+    margin: 10px auto;
+    width: 100%;
+  }
+
+  .p-about {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: -20px;
+  }
+
+  .p-about button {
+    font-size: 2rem;
+  }
+
+  /* Project */
+  .container2 .ex-pj {
+    font-size: 4rem;
+    padding-top: 3.5em;
+  }
+
+  .container2 .container-ex {
+    width: 40%;
+    padding: 2px;
+  }
+
+  .container-ex h1 {
+    font-size: 1.8rem;
+  }
+
+  .card-1-ex,
+  .card-2-ex,
+  .card-3-ex,
+  .card-4-ex,
+  .card-5-ex,
+  .card-6-ex {
+    width: 10%;
+  }
+
+  .container2 .container-pj {
+    width: 50%;
+    float: right;
+    margin-right: 1em;
+    margin-top: -50em;
+  }
+
+  .card-1-pj,
+  .card-2-pj,
+  .card-3-pj,
+  .card-4-pj {
+    width: 40%;
+    margin: 10px;
+  }
+
+  .card-1-pj img,
+  .card-2-pj img,
+  .card-3-pj img,
+  .card-4-pj img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/* Handphone */
+@media (max-width: 480px) {
+  html {
+    font-size: 55%;
+  }
+  .navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--color5);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.7s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #000000;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .hero .content h1 {
+    font-size: 4em;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  .hero .img-container img {
+    width: 40%;
+    margin: 50px;
+    margin-right: 14em;
+    margin-top: 50px;
+  }
+
+  .hero .content p {
+    font-size: 1.3rem;
+  }
+
+  .hero .content .cta {
+    padding: 0.6rem 1.5rem;
+    font-size: 15px;
+    display: none;
+  }
+  /* About */
+  .about h1 {
+    font-size: 4rem;
+    padding-top: 40px;
+  }
+
+  .about .a-hero img {
+    width: 50%;
+    margin: 20px 12em;
+  }
+
+  .about .container-about {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-1-about,
+  .card-2-about {
+    width: 40%;
+    margin: 5px 2em;
+  }
+
+  .container-about-2 {
+    width: 95%;
+    margin-top: 50px;
+  }
+
+  .p-about {
+    font-size: 1.2rem;
+    margin: -50px;
+  }
+
+  .p-about button {
+    font-size: 1.5rem;
+  }
+
+  /* Project */
+  .container2 .ex-pj {
+    font-size: 4rem;
+  }
+
+  .container2 .container-ex {
+    width: 80%;
+    padding: 10px;
+  }
+
+  .container-ex h1 {
+    font-size: 2rem;
+  }
+
+  .card-1-ex,
+  .card-2-ex,
+  .card-3-ex,
+  .card-4-ex,
+  .card-5-ex,
+  .card-6-ex {
+    width: 30%;
+    margin: 10px auto;
+  }
+
+  .container2 .container-pj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .container2 .container-pj {
+    display: none;
+  }
+}
